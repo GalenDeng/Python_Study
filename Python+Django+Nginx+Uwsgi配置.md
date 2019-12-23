@@ -21,6 +21,9 @@
     3. uWSGI本身是内网接口，开启多个work和processes可能也不够用，而nginx可以代理多台uWSGI完成uWSGI的负载均衡； 
     4. django在debug=False下对静态文件的处理能力不是很好，而用nginx来处理更加高效。
 
+
+# uwsgi --http :8000 --wsgi-file test.py
+
 直接使用uwsgi启动: （发现static静态文件没生效，需要配置http://uwsgi-docs.readthedocs.io/en/latest/StaticFiles.html）
 uwsgi --http :8056 --wsgi-file dirserver/wsgi.py	#自己开http服务
 uwsgi --socket :8056 --wsgi-file dirserver/wsgi.py  	#使用nginx配合使用时
