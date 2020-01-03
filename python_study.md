@@ -53,3 +53,10 @@ def print_info( a , b = _no_value ):
 list1 = [1,2,3,4]
 iter2 = iter ( list1 )
 ```
+8. `map 和 lambda 的使用方式`
+```
+>>> x  = [1,2 ,3]
+>>> y = map(lambda x : x +1 ,x)
+>>> print(list(y))
+[2, 3, 4]
+```
